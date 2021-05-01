@@ -1,4 +1,4 @@
-document.getElementById("display").innerHTML = "TRIVIA";
+// document.getElementById("display").innerHTML = "TRIVIA";
 
 var wavesurfer = window.wavesurfer; // eslint-disable-line no-var
 

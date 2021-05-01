@@ -98,7 +98,7 @@
  
      var data_action = document.querySelector('[data-action="delete-region"]');
      if(data_action){
-        document.getElementById("display1").innerHTML = "data_action exist";
+        // document.getElementById("display1").innerHTML = "data_action exist";
         data_action.addEventListener('click', function() {
             let form = document.forms.edit;
             let regionId = form.dataset.region;
