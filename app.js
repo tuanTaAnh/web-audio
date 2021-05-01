@@ -1,5 +1,3 @@
-document.getElementById("display1").innerHTML = "APP";
-
 /**
  * Create a WaveSurfer instance.
  */
@@ -98,16 +96,22 @@ document.getElementById("display1").innerHTML = "APP";
      });
  
  
-     document.querySelector(
-         '[data-action="delete-region"]'
-     ).addEventListener('click', function() {
-         let form = document.forms.edit;
-         let regionId = form.dataset.region;
-         if (regionId) {
-             wavesurfer.regions.list[regionId].remove();
-             form.reset();
-         }
-     });
+     var data_action = document.querySelector('[data-action="delete-region"]');
+     if(data_action){
+        document.getElementById("display1").innerHTML = "data_action exist";
+        data_action.addEventListener('click', function() {
+            let form = document.forms.edit;
+            let regionId = form.dataset.region;
+            if (regionId) {
+                wavesurfer.regions.list[regionId].remove();
+                form.reset();
+            }
+        });
+      }
+      else
+      {
+        document.getElementById("display1").innerHTML = "data_action not exist";
+      }
  });
  
  /**
